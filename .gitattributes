@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.pak binary
+*.exe binary
+*.usmap binary

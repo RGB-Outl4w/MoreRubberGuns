@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>More Rubber Guns · Ready or Not mod</title>
+  <meta name="description" content="Five rubber-bullet weapons for Ready or Not: light guns that stun, heavy guns that knock suspects down without killing them.">
+  <meta name="theme-color" content="#0b0d10">
+  <meta property="og:title" content="More Rubber Guns · Ready or Not mod">
+  <meta property="og:description" content="2 rifles, 2 pistols and an SMG firing rubber rounds. Light guns stun, heavy guns knock down.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#arsenal" data-i18n="nav.skip">Skip to the weapons</a>
+
+  <header class="nav">
+    <div class="wrap nav-row">
+      <a class="brand" href="#top" aria-label="More Rubber Guns">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <span>More Rubber Guns</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#arsenal" data-i18n="nav.weapons">Weapons</a>
+        <a href="#play" data-i18n="nav.play">How it plays</a>
+        <a href="#install" data-i18n="nav.install">Install</a>
+        <a href="#support" data-i18n="nav.support">Support</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker" data-i18n="hero.kicker">Ready or Not · less-lethal mod</p>
+          <h1>More Rubber<br>Guns</h1>
+          <p class="lead" data-i18n="hero.lead">Five rubber-bullet weapons, so the beanbag shotgun isn't your only less-lethal long gun anymore. Light guns stun. Heavy guns knock suspects down, wounded but alive.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="https://github.com/RGB-Outl4w/MoreRubberGuns/releases/latest">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+              <span data-i18n="hero.download">Download .pak</span>
+            </a>
+            <a class="btn" href="https://github.com/RGB-Outl4w/MoreRubberGuns">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5m12 5v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.7 4.7 0 0 0-1.3-3.2 4.4 4.4 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.1 5.6 2.4 5.6 2.4a4.4 4.4 0 0 0-.1 3.2A4.7 4.7 0 0 0 4.2 8.8c0 4.6 2.8 5.7 5.5 6a3 3 0 0 0-.8 2.3V21"/></svg>
+              <span data-i18n="hero.github">Source on GitHub</span>
+            </a>
+            <a class="btn btn-ghost" href="https://boosty.to/rgboutlaw">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+              <span data-i18n="hero.support">Support on Boosty</span>
+            </a>
+          </div>
+          <ul class="meta">
+            <li data-i18n="hero.meta1">2 rifles · 2 pistols · 1 SMG</li>
+            <li data-i18n="hero.meta2">Single .pak, no loaders needed</li>
+            <li data-i18n="hero.meta3">English and Russian</li>
+          </ul>
+        </div>
+        <figure class="rounds" aria-label="The four rubber cartridges">
+          <svg viewBox="0 0 400 330" role="img">
+            <defs>
+              <linearGradient id="g-brass" x1="0" x2="1">
+                <stop offset="0" stop-color="#7a5b1c"/><stop offset=".35" stop-color="#e3c26a"/>
+                <stop offset=".6" stop-color="#c79b3c"/><stop offset="1" stop-color="#6b4f17"/>
+              </linearGradient>
+              <linearGradient id="g-blue" x1="0" x2="1">
+                <stop offset="0" stop-color="#1d4b99"/><stop offset=".4" stop-color="#5d9bff"/><stop offset="1" stop-color="#1a3f80"/>
+              </linearGradient>
+              <linearGradient id="g-orange" x1="0" x2="1">
+                <stop offset="0" stop-color="#b8430a"/><stop offset=".4" stop-color="#ff8a3d"/><stop offset="1" stop-color="#a33a07"/>
+              </linearGradient>
+            </defs>
+            <g class="round r1" transform="translate(30 30)">
+              <rect x="0" y="70" width="34" height="170" rx="3" fill="url(#g-brass)"/>
+              <path d="M0 70 L8 40 H26 L34 70 Z" fill="url(#g-brass)"/>
+              <path d="M8 40 Q17 -18 26 40 Z" fill="url(#g-blue)"/>
+              <rect x="-3" y="232" width="40" height="10" rx="2" fill="#8a6a22"/>
+            </g>
+            <g class="round r2" transform="translate(115 130)">
+              <rect x="0" y="40" width="38" height="70" rx="3" fill="url(#g-brass)"/>
+              <path d="M2 40 Q19 -14 36 40 Z" fill="url(#g-blue)"/>
+              <rect x="-3" y="104" width="44" height="10" rx="2" fill="#8a6a22"/>
+            </g>
+            <g class="round r3" transform="translate(205 40)">
+              <rect x="0" y="80" width="40" height="150" rx="3" fill="url(#g-brass)"/>
+              <path d="M0 80 L6 56 H34 L40 80 Z" fill="url(#g-brass)"/>
+              <path d="M6 56 Q20 -16 34 56 Z" fill="url(#g-orange)"/>
+              <rect x="-3" y="222" width="46" height="10" rx="2" fill="#8a6a22"/>
+            </g>
+            <g class="round r4" transform="translate(300 112)">
+              <rect x="0" y="52" width="48" height="74" rx="3" fill="url(#g-brass)"/>
+              <path d="M2 52 Q24 -18 46 52 Z" fill="url(#g-orange)"/>
+              <rect x="-3" y="120" width="54" height="10" rx="2" fill="#8a6a22"/>
+            </g>
+            <g class="round-labels">
+              <text x="47" y="300">5.56 RB</text>
+              <text x="134" y="300">9mm P.A.</text>
+              <text x="225" y="300">.300 Baton</text>
+              <text x="324" y="300">.45 Rubber</text>
+            </g>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="classes-title">
+      <div class="wrap">
+        <h2 id="classes-title" data-i18n="classes.title">Two kinds of rubber</h2>
+        <div class="classes">
+          <article class="class-card light">
+            <span class="chip" data-i18n="classes.light.chip">Light · Stinger</span>
+            <h3 data-i18n="classes.light.title">Stun, never wound</h3>
+            <p data-i18n="classes.light.text">Every hit stuns the target like a beanbag and drains their will to fight. The damage is a token 0.1, so even a full magazine won't put anyone down.</p>
+            <p class="who" data-i18n="classes.light.who">MK18 · MP5 · G19 in Simunition blue</p>
+          </article>
+          <article class="class-card heavy">
+            <span class="chip" data-i18n="classes.heavy.chip">Heavy · Baton</span>
+            <h3 data-i18n="classes.heavy.title">Knock down, don't kill</h3>
+            <p data-i18n="classes.heavy.text">Rubber batons hit hard enough to put a suspect on the ground, wounded but alive. As with the beanbag, head shots and point-blank hits can still kill.</p>
+            <p class="who" data-i18n="classes.heavy.who">LVAR · 1911 in less-lethal orange</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="arsenal" aria-labelledby="arsenal-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="arsenal-title" data-i18n="arsenal.title">The arsenal</h2>
+            <p class="sub" data-i18n="arsenal.lead">Every gun keeps the original's model, animations and full attachment list (minus suppressors), with properly aligned scopes.</p>
+          </div>
+          <div class="filters" role="group" aria-label="Filter weapons">
+            <button type="button" data-filter="all" aria-pressed="true" data-i18n="filter.all">All</button>
+            <button type="button" data-filter="light" aria-pressed="false" data-i18n="filter.light">Light</button>
+            <button type="button" data-filter="heavy" aria-pressed="false" data-i18n="filter.heavy">Heavy</button>
+            <button type="button" data-filter="primary" aria-pressed="false" data-i18n="filter.primary">Primary</button>
+            <button type="button" data-filter="secondary" aria-pressed="false" data-i18n="filter.secondary">Secondary</button>
+          </div>
+        </div>
+        <div class="cards" id="cards"></div>
+        <noscript><p class="sub">Enable JavaScript to see the weapon cards, or read the <a href="https://github.com/RGB-Outl4w/MoreRubberGuns#the-arsenal">spec sheet on GitHub</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section" id="play" aria-labelledby="play-title">
+      <div class="wrap">
+        <h2 id="play-title" data-i18n="play.title">How it plays</h2>
+        <div class="play">
+          <article>
+            <h3><span class="dot blue"></span><span data-i18n="play.light.title">Light guns</span></h3>
+            <p data-i18n="play.light.text">A couple of hits usually end with a suspect on their knees. Use them to make people comply, not to win firefights.</p>
+          </article>
+          <article>
+            <h3><span class="dot orange"></span><span data-i18n="play.pistol.title">1911 LL Baton</span></h3>
+            <p data-i18n="play.pistol.text">The beanbag with more punch. Each hit stuns hard and costs a lot of morale. If they still won't comply, 3 body hits put them down (2 up close).</p>
+          </article>
+          <article>
+            <h3><span class="dot orange"></span><span data-i18n="play.rifle.title">LVAR LL Baton</span></h3>
+            <p data-i18n="play.rifle.text">Built for sustained fire. Suspects shake the stun off in half a second and stay hostile, so you can't close a 10–20 m gap. Keep firing: about 5 body hits put them down.</p>
+          </article>
+        </div>
+        <dl class="numbers">
+          <div><dt data-i18n="num.suspect">Suspect health</dt><dd>360</dd></div>
+          <div><dt data-i18n="num.civ">Civilian health</dt><dd>200</dd></div>
+          <div><dt data-i18n="num.down">Knocked down at</dt><dd>≤ 50%</dd></div>
+          <div><dt data-i18n="num.stun">Stun per hit</dt><dd>~3 s</dd></div>
+          <div><dt data-i18n="num.recover">LVAR: back on target after</dt><dd>0.5 s</dd></div>
+        </dl>
+        <p class="footnote" data-i18n="num.note">Measured on Standard difficulty. Heavy hits deal +25 up close, and ×2 +50 to the head.</p>
+      </div>
+    </section>
+
+    <section class="section" id="install" aria-labelledby="install-title">
+      <div class="wrap">
+        <h2 id="install-title" data-i18n="install.title">Install in a minute</h2>
+        <ol class="steps">
+          <li>
+            <h3 data-i18n="install.s1.title">Download</h3>
+            <p data-i18n-html="install.s1.text">Grab <code>pakchunk99-Mods_MoreRubberGuns_P.pak</code> from the <a href="https://github.com/RGB-Outl4w/MoreRubberGuns/releases/latest">latest release</a>.</p>
+          </li>
+          <li>
+            <h3 data-i18n="install.s2.title">Drop it in</h3>
+            <p data-i18n="install.s2.text">Copy the file into the game's Paks folder:</p>
+            <div class="path">
+              <code id="paks-path">…\steamapps\common\Ready Or Not\ReadyOrNot\Content\Paks\</code>
+              <button type="button" class="copy" data-copy="#paks-path" data-i18n="install.copy">Copy</button>
+            </div>
+          </li>
+          <li>
+            <h3 data-i18n="install.s3.title">Gear up</h3>
+            <p data-i18n="install.s3.text">Start the game and open Loadout. The guns are in the Less Lethal tab of the primary and secondary slots.</p>
+          </li>
+        </ol>
+        <div class="notes">
+          <p class="note" data-i18n-html="install.mp"><b>Multiplayer:</b> every player in the lobby needs the mod. To uninstall, delete the <code>.pak</code>.</p>
+          <p class="note" data-i18n-html="install.compat"><b>Compatibility:</b> built for Steam build 24942528 (Unreal Engine 5.3). Mods that replace <code>AmmoDataTable</code>, scope blueprints or the Russian engine locres will conflict. <a href="https://github.com/RGB-Outl4w/MoreRubberGuns#compatibility">Details</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="build-title">
+      <div class="wrap build">
+        <div>
+          <h2 id="build-title" data-i18n="build.title">Built from your own game files</h2>
+          <p data-i18n="build.text">The repository stores no game assets. A Python script extracts the vanilla weapons from your install, turns them into rubber guns and packs the mod. After a game patch, rebuild against the new files with a single command.</p>
+          <a class="link" href="https://github.com/RGB-Outl4w/MoreRubberGuns#building-from-source" data-i18n="build.link">Build instructions →</a>
+        </div>
+        <pre class="terminal" aria-label="Build command"><span class="prompt">&gt;</span> python build.py --install
+<span class="out">MK18 LL Stinger  5.56x45mm RB
+LVAR LL Baton    .300 BLK Baton
+G19 LL Stinger   9mm P.A. Rubber
+1911 LL Baton    .45 Rubber
+MP5 LL Stinger   9mm P.A. Rubber
+built pakchunk99-Mods_MoreRubberGuns_P.pak</span></pre>
+      </div>
+    </section>
+
+    <section class="section" id="support" aria-labelledby="support-title">
+      <div class="wrap">
+        <div class="support">
+          <div>
+            <h2 id="support-title" data-i18n="support.title">Enjoying the mod?</h2>
+            <p data-i18n="support.text">More Rubber Guns is free and always will be. If it made your raids better, you can support its development on Boosty.</p>
+          </div>
+          <a class="btn btn-boosty" href="https://boosty.to/rgboutlaw">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+            <span data-i18n="support.btn">Support on Boosty</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-row">
+      <p data-i18n-html="footer.license">Code &amp; site: <a href="https://github.com/RGB-Outl4w/MoreRubberGuns/blob/main/LICENSE">MIT</a> © <span class="year">2026</span> OutlawRGB</p>
+      <p class="disclaimer" data-i18n="footer.disclaimer">Ready or Not and its assets belong to VOID Interactive. This is a free, non-commercial fan mod, not affiliated with or endorsed by VOID Interactive.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# Build output: extracted game assets, JSON dumps, staging tree and the pak
+# (the pak ships via GitHub Releases, never in git)
+build/
+*.pak
+*.utoc
+*.ucas
+
+# Third-party tools and the game's type mappings (see README → Building from source)
+tools/*
+!tools/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp

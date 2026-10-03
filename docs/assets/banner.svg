@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="1280" height="360" role="img" aria-labelledby="t d">
+  <title id="t">More Rubber Guns</title>
+  <desc id="d">Five rubber-bullet weapons for Ready or Not: light stun guns in blue, heavy knockdown guns in orange.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0d10"/>
+      <stop offset="1" stop-color="#161a20"/>
+    </linearGradient>
+    <linearGradient id="brass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7a5b1c"/>
+      <stop offset=".35" stop-color="#e3c26a"/>
+      <stop offset=".6" stop-color="#c79b3c"/>
+      <stop offset="1" stop-color="#6b4f17"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1d4b99"/>
+      <stop offset=".4" stop-color="#4c8cf0"/>
+      <stop offset="1" stop-color="#1a3f80"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b8430a"/>
+      <stop offset=".4" stop-color="#ff8a3d"/>
+      <stop offset="1" stop-color="#a33a07"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".04"/>
+    </pattern>
+    <pattern id="hazard" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="28" fill="#FF6A13"/>
+      <rect x="14" width="14" height="28" fill="#2F6FD6"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect width="1280" height="360" fill="url(#grid)"/>
+  <rect x="0" y="0" width="14" height="360" fill="url(#hazard)"/>
+
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <text x="72" y="104" fill="#8b95a5" font-size="20" font-weight="600" letter-spacing="6">READY OR NOT · LESS-LETHAL MOD</text>
+    <text x="68" y="190" fill="#f2f4f7" font-size="84" font-weight="800" letter-spacing="1">MORE RUBBER</text>
+    <text x="68" y="270" fill="#f2f4f7" font-size="84" font-weight="800" letter-spacing="1">GUNS</text>
+    <text x="330" y="258" fill="#aab3c0" font-size="22">2 rifles · 2 pistols · 1 SMG</text>
+    <text x="72" y="318" fill="#6f7a8a" font-size="17">
+      <tspan fill="#5d9bff">■</tspan> light: stun only   <tspan fill="#ff8a3d" dx="18">■</tspan> heavy: knock down, not kill
+    </text>
+  </g>
+
+  <!-- cartridges: 5.56 RB, 9mm P.A., .300 BLK Baton, .45 Rubber -->
+  <g transform="translate(860 60)">
+    <g transform="translate(0 30)">
+      <rect x="0" y="70" width="34" height="170" rx="3" fill="url(#brass)"/>
+      <path d="M0 70 L8 40 H26 L34 70 Z" fill="url(#brass)"/>
+      <path d="M8 40 Q17 -18 26 40 Z" fill="url(#blue)"/>
+      <rect x="-3" y="232" width="40" height="10" rx="2" fill="#8a6a22"/>
+    </g>
+    <g transform="translate(78 130)">
+      <rect x="0" y="40" width="38" height="70" rx="3" fill="url(#brass)"/>
+      <path d="M2 40 Q19 -14 36 40 Z" fill="url(#blue)"/>
+      <rect x="-3" y="104" width="44" height="10" rx="2" fill="#8a6a22"/>
+    </g>
+    <g transform="translate(164 40)">
+      <rect x="0" y="80" width="40" height="150" rx="3" fill="url(#brass)"/>
+      <path d="M0 80 L6 56 H34 L40 80 Z" fill="url(#brass)"/>
+      <path d="M6 56 Q20 -16 34 56 Z" fill="url(#orange)"/>
+      <rect x="-3" y="222" width="46" height="10" rx="2" fill="#8a6a22"/>
+    </g>
+    <g transform="translate(254 112)">
+      <rect x="0" y="52" width="48" height="74" rx="3" fill="url(#brass)"/>
+      <path d="M2 52 Q24 -18 46 52 Z" fill="url(#orange)"/>
+      <rect x="-3" y="120" width="54" height="10" rx="2" fill="#8a6a22"/>
+    </g>
+    <g font-family="'Consolas', 'Menlo', monospace" font-size="13" fill="#7d8796" text-anchor="middle">
+      <text x="17" y="290">5.56 RB</text>
+      <text x="97" y="290">9mm P.A.</text>
+      <text x="184" y="290">.300 Baton</text>
+      <text x="278" y="290">.45 Rubber</text>
+    </g>
+  </g>
+</svg>

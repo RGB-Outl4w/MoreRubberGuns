@@ -1,0 +1,38 @@
+name: Bug report
+description: Something doesn't work in game or in the build
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: input
+    id: weapon
+    attributes:
+      label: Weapon(s)
+      placeholder: e.g. LVAR LL Baton
+  - type: input
+    id: version
+    attributes:
+      label: Mod version and game build
+      description: Mod version from the release name. Game build is in Steam → Ready or Not → Properties → Updates.
+      placeholder: e.g. mod 1.0.0, game build 24942528
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options: [Singleplayer, Multiplayer (host), Multiplayer (client)]
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods installed
+      description: Mods that replace AmmoDataTable, scopes or Russian locres files conflict with this one.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Screenshots / logs
