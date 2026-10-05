@@ -205,9 +205,8 @@ def set_prop(props, p):
     for i, old in enumerate(props):
         if old["Name"] == p["Name"]:
             props[i] = p
-            return p
+            return
     props.append(p)
-    return p
 
 
 def _p(kind, name, value, **extra):
@@ -322,9 +321,7 @@ def read_locres(b):
 
 def write_locres(entries):
     """Legacy .locres (no magic/hashes): still loaded by UE5 and needs no CityHash."""
-    def fs(s):
-        if s.isascii():
-            return struct.pack("<i", len(s) + 1) + s.encode("ascii") + b"\0"
+    def fs(s):  # always UTF-16 (negative length); UE reads it for ASCII too
         u = s.encode("utf-16-le")
         return struct.pack("<i", -(len(u) // 2 + 1)) + u + b"\0\0"
 
@@ -364,11 +361,6 @@ def find_game():
 def disk_path(pkg):
     root = next(r for r in ROOTS if pkg.startswith(r))
     return ROOTS[root] + pkg[len(root):]
-
-
-def package_path(disk):
-    root = next((r for r, d in ROOTS.items() if disk.startswith(d)), None)
-    return root and root + disk[len(ROOTS[root]):].rsplit(".", 1)[0]
 
 
 def pak_index():
@@ -566,7 +558,8 @@ def patch_scopes(built):
 def patch_attachment_anims(built):
     """Magnifier/flip-up toggle animations list their weapons too (WeaponAttachmentAnimData.ParentWeapons)."""
     pairs = [(donor, new) for donor, new, _ in built]
-    pkgs = [p for d in pak_index() if d.endswith("AttachmentData.uasset") and (p := package_path(d))]
+    pkgs = [r + d[len(ROOTS[r]):-len(".uasset")] for d in pak_index() if d.endswith("AttachmentData.uasset")
+            for r in ROOTS if d.startswith(ROOTS[r])]
     extract(pkgs)
     for pkg in pkgs:
         asset = load(pkg)

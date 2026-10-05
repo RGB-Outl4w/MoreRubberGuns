@@ -177,7 +177,7 @@ const RU = {
   "support.title": "Нравится мод?",
   "support.text": "More Rubber Guns бесплатный и останется таким. Если он сделал ваши штурмы лучше, можно поддержать разработку на Boosty.",
   "support.btn": "Поддержать на Boosty",
-  "footer.license": "Код и сайт: <a href=\"https://github.com/RGB-Outl4w/MoreRubberGuns/blob/main/LICENSE\">MIT</a> © <span class=\"year\">2026</span> OutlawRGB",
+  "footer.license": "Код и сайт: <a href=\"https://github.com/RGB-Outl4w/MoreRubberGuns/blob/main/LICENSE\">MIT</a> © 2026 OutlawRGB",
   "footer.disclaimer": "Ready or Not и её ассеты принадлежат VOID Interactive. Это бесплатный некоммерческий фанатский мод, не связанный с VOID Interactive и не одобренный ею.",
 };
 
@@ -263,7 +263,6 @@ function setLang(next) {
     el.innerHTML = lang === "ru" && RU[key] ? RU[key] : EN[key];
   });
   document.querySelectorAll("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lang === lang));
-  document.querySelectorAll(".year").forEach((el) => (el.textContent = new Date().getFullYear()));
   renderCards();
   store("mrg-lang", lang);
 }
