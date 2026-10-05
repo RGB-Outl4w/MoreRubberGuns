@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.1] - 2026-10-05
+
+No gameplay changes. Built against Ready or Not Steam build 24942528.
+
+### Changed
+
+- The Russian locres writer now stores every string as UTF-16. Tested in game: all Russian texts still display.
+- Smaller `build.py` cleanups.
+- Showcase site: the footer copyright year is fixed at 2026.
+
 ## [1.0.0] - 2026-10-03
 
 First release. Built against Ready or Not Steam build 24942528 (Unreal Engine 5.3).
